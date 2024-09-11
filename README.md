@@ -10,6 +10,7 @@ This project is designed to simulate an API interaction for weather data analysi
 - **Offline Simulation**: No internet connection is needed; the tool works entirely offline by using locally stored JSON data.
 - **Temperature Classification**: Classifies temperatures into categories such as "Hot", "Warm", or "Cold" using simple logic.
 - **Simple and Lightweight**: Minimalistic code, focusing on basic functionality and easy understanding.
+- **Flexible File Path**: Easily configurable file path to load JSON data from any location on your system.
 
 ## Steps
 
@@ -47,15 +48,21 @@ This project is designed to simulate an API interaction for weather data analysi
      ```
 
 2. **Create the JSON File**
-   - Create a file named `weather_data.json` in the project directory with the example data provided above.
+   - Create a file named `test.json` in the specified directory with the example data provided above.
 
-3. **Run the Python Script**
-   - Execute the Python script to load and analyze the data:
-     ```bash
-     python weather_analyzer.py
+3. **Update File Path in Script**
+   - Ensure that the `file_path` variable in `source.py` is set to the location of your `test.json` file. Example path:
+     ```python
+     file_path = r'C:\Users\saral\Kong\test.json'
      ```
 
-4. **View Results**
+4. **Run the Python Script**
+   - Execute the Python script to load and analyze the data:
+     ```bash
+     python source.py
+     ```
+
+5. **View Results**
    - The script will print the classification of each city's temperature to the console.
 
 ## Outputs
@@ -80,6 +87,12 @@ This project is designed to simulate an API interaction for weather data analysi
 
 - **Local JSON File**: Contains the simulated API data used for analysis.
 
+## Applications
+
+- **Educational Tool**: Helps understand how to process and analyze JSON data offline, which can be useful for learning purposes and basic data handling skills.
+- **Prototype Development**: Serves as a starting point for developing more advanced data analysis tools and applications that do not rely on real-time internet connections.
+- **Offline Data Testing**: Allows developers to test their data processing and classification logic without needing to connect to live APIs, useful for environments with limited internet access.
+
 ## Project Insights
 
 This project demonstrates how to simulate API interactions and perform basic data classification offline. It provides a simple yet effective example of handling local data and classifying it using basic logic. This approach can be expanded to include more complex data and classifications as needed.
@@ -91,5 +104,4 @@ This project is a prototype meant for educational purposes and simulates real-wo
 ## Links
 
 - [Project Code on GitHub](https://github.com/yourusername/weather-analyzer)
-- **JSON Data Example**: [weather_data.json](./weather_data.json)
-
+- **JSON Data Example**: [test.json](./test.json)
